@@ -4,7 +4,7 @@ require 'capybara/rspec'
 describe "the doctor form", :type => :feature do
   it "sets the name" do
     visit '/doctors/new'
-    fill_in :name, with: 'Gillian'
+    fill_in :doctor_name, with: 'Gillian'
     find('input[name="commit"]').click
     expect(Doctor.last.name).to eq 'Gillian'
   end

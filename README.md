@@ -23,4 +23,4 @@ The models and show routes and associations have been set up for you.
 
 ### Instructions
 
-Build a doctor form that accepts three patients! It should automatically create the new `Patient` objects.
+Build a doctor form that accepts two patients! It should automatically create the new `Patient` objects.
