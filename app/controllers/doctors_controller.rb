@@ -15,7 +15,6 @@ class DoctorsController < ApplicationController
 
   def create
     @doctor = Doctor.create(doctor_params)
-    # byebug
     redirect_to doctors_path
   end
 
