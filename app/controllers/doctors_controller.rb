@@ -9,8 +9,19 @@ class DoctorsController < ApplicationController
 
   def new
     @doctor = Doctor.new
+    @doctor.patients.build
+    @doctor.patients.build
   end
 
   def create
+    @doctor = Doctor.create(doctor_params)
+    # byebug
+    redirect_to doctors_path
+  end
+
+private
+
+  def doctor_params
+    params.require(:doctor).permit(:name, patients_attributes: %i[name age])
   end
 end
